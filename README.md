@@ -26,3 +26,15 @@ Note: You might want to select different language version
 
 Open ```http://localhost:8080/``` in your browser, you should see the Installation Screen
 
+### Default credentials
+
+These are meant only for local vagrant setup and must not be used on production server
+
+    # Mysql
+    database_name: wordpress
+    database_user: wordpress
+    database_pass: wordpress
+
+### Stop server by typing
+
+    vagrant halt

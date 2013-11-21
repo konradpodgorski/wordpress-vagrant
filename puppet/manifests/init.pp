@@ -1,8 +1,4 @@
 
-
-$mysql_password = "vagrant"
-
-
 # create a new run stage to ensure certain modules are included first
 stage { 'pre':
   before => Stage['main']
