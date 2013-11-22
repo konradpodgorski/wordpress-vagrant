@@ -3,6 +3,17 @@ Wordpress Vagrant
 
 Vagrant config to start local environment for developing with Wordpress in a matter of minutes
 
+# Requisites
+
+Vagrant
+
+    http://www.vagrantup.com/
+
+Virtualbox
+
+    https://www.virtualbox.org/
+
+
 ### Start local server
 
     vagrant up
@@ -34,7 +45,20 @@ These are meant only for local vagrant setup and must not be used on production 
     database_name: wordpress
     database_user: wordpress
     database_pass: wordpress
+    database_port: 3306
 
 ### Stop server by typing
 
     vagrant halt
+
+
+### Accessing Mysql
+
+Download MySQL Workbench
+
+    http://dev.mysql.com/downloads/tools/workbench/
+
+Credentials (from host machine)
+
+    mysql port: 33060
+
