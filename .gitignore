@@ -1,2 +1,3 @@
-/sites/*
-!/sites/.gitkeep
+/www/*
+!/www/.gitkeep
+/.vagrant

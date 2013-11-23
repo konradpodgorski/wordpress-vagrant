@@ -1,0 +1,25 @@
+<VirtualHost *:80>
+    ServerAdmin webmaster@localhost
+    ServerName localhost
+
+    DocumentRoot /var/www
+
+    <Directory /var/www>
+        Options Indexes FollowSymLinks
+        AllowOverride None
+        RewriteEngine On
+        RewriteBase /
+        RewriteRule ^index\.php$ - [L]
+        RewriteCond %{REQUEST_FILENAME} !-f
+        RewriteCond %{REQUEST_FILENAME} !-d
+        RewriteRule . /index.php [L]
+    </Directory>
+
+    ErrorLog ${APACHE_LOG_DIR}/www.log
+
+    # Possible values include: debug, info, notice, warn, error, crit,
+    # alert, emerg.
+    LogLevel warn
+
+    CustomLog ${APACHE_LOG_DIR}/www.log combined
+</VirtualHost>

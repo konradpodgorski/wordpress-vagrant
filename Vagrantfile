@@ -9,8 +9,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box_url = "http://files.vagrantup.com/precise32.box"
 
   config.vm.network :forwarded_port, guest: 80, host: 8080
-
+  config.vm.boot_timeout = 600
   config.ssh.forward_agent = true
+  config.vm.synced_folder "www/", "/var/www/", :owner => "www-data", :group => "www-data"
 
   config.vm.provision :puppet do |puppet|
     puppet.manifests_path = "puppet/manifests"
